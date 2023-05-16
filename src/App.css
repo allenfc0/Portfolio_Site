@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
+}
+
+
+
+.top-background {
+    background-image: url(../img/stardew.png);
+    background-repeat: no-repeat;
+    
+    height: 70rem;
+    width: 100%;
+    
+    color: #fff;
+
+    /*base*/
+    z-index: 0;
+
+    position: relative;
+
+    display: flex;
+    
+}
+
+.header {
+    top: 0;
+    position: sticky;
+    height: 5%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    opacity: .75;
+
+    
+}
+
+#title {
+    line-height: 50px;
+    padding: 0 10rem;
+    font-weight: 500;
+    width: 50%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10rem;
+    width: 50%;
+}
+
+.nav-links a {
+    line-height: 50px;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.layers {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+/*
+.cloud-animation {
+    position: absolute;
+    height: 50rem;
+    width: 100%;
+
+    background-image: url(../img/cloud.png);
+    background-repeat: no-repeat;
+
+    opacity: 0.45;
+    animation: slide 10s linear infinite;
+    animation-play-state: running;
+}
+*/
+
+#introduction {
+    position: absolute;
+    padding: 20% 25%;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.background-image {
+    background-color: white;
+}
+
+/* Helper */
+.def-button {
+    background-color: gray;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    width: 1.5rem;
+    height: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
