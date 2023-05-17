@@ -25,9 +25,10 @@ function App() {
   return (
     <div className='app'>
       <div className='top-background'>
+        
         <div className='header'>
 
-          <h3 id='title' >Allen Farias - Full Stack Developer</h3>
+          <div><h3 id='title' >Allen Farias - Full Stack Developer</h3></div>
           <nav className='nav-links'>
 
             <a href="#project">Projects</a>
@@ -38,29 +39,33 @@ function App() {
 
         </div>
         
-        <div className='layers'>
-          <div className='cloud-animation'></div>
-          
-        </div>
         <div id='introduction'>
           Hello, my name is Allen & <br/> 
-          I am a Full Stack Developer</div>
+          I am a Full Stack Developer
+        </div>
         
+        <div className='background-image'>
+
+        
+
+          <div className='content'>
+
+            {
+
+              <div className='project-showcase' id='project'>
+                hello
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
       </div>
       
 
-      <div className='background-image'>
-
-        
-
-        <div className='content'>
-
-          <div className='project-showcase' id='project'>
-            hello
-          </div>
-        </div>
-
-      </div>
+      
     </div>
 
     
