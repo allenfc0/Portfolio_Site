@@ -3,27 +3,29 @@ import './App.css';
 
 import { useState } from 'react';
 
+import { ProjectManipulation as expand } from './ProjectManipulation';
+
 function App() {
 
   const [projects, setProjects] = useState([
     { 
-      "id": 1,
-      "title": "Coffee Shop",
-      "type": "Landing Page for a Shop",
-      "image": "",
-      "description": "",
-      "technologies": "",
-      "link": "https://gavi-caffee.surge.sh",
+      id: 1,
+      title: "Coffee Shop",
+      type: "Landing Page for a Shop",
+      image: "",
+      description: "",
+      technologies: "",
+      link: "https://gavi-caffee.surge.sh"
     },
     { 
-      "id": 2,
-      "title": "Chat Group",
-      "type": "Communication",
-      "image": "",
-      "description": "",
-      "technologies": "",
-      "link": "",
-    },
+      id: 2,
+      title: "Weather Forecast",
+      type: "3rd Party API",
+      image: "",
+      description: "",
+      technologies: "",
+      link: ""
+    }
   ]);
   
 
@@ -51,23 +53,26 @@ function App() {
         
         <div className='background-image'>
 
-        <h2 id='project'>My Projects</h2>
+          <h2 id='project'>My Projects</h2>
 
           <div className='project-showcase'>
             
             
             {
               projects.map(p => 
-                <div key={p.id}>
-                  <div className='each-project' onClick={() => console.log(p.title)}>
-                    <a href={p.link}>{p.title}</a>
+                <div key={p.id} className={'id-' + p.id}>
+                  <div className='each-project' onClick={() => expand(p.id)}>
+                    <span>{p.title}</span>
                   </div>
+                  
+                  
                 </div>
                 
               )
             }
             
 
+            
           </div>
 
         </div>

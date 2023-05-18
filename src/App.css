@@ -109,18 +109,20 @@
     position: relative;
     width: 15rem;
     height: 15rem;
-    margin: 50rem 10rem;
     margin: 4rem;
+
+
     background-color: black;
-    transition: 1s;
-    transition-property: font-size;
+    
+    transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 
 .each-project:hover {
-    font-size: 40px;
+    transform: scale(1.2);
 }
 
-.each-project a {
+.each-project span {
     position: absolute;
     font-size: 2rem;
     color: white;
@@ -129,7 +131,19 @@
     padding: 70px;
 }
 
+.each-project.expand {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    right: 5rem;
+    bottom: 5rem;
 
+    background-color: white;
+    width: 30rem;
+    transform: scale(1.2);
+    z-index: 7;
+    color: black;
+}
 
 /* Helper */
 .def-button {
