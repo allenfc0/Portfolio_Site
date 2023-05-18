@@ -59,7 +59,7 @@
 .nav-links {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     width: 50%;
     padding: 1.5% 3%;
 }
@@ -78,6 +78,7 @@
     font-size: 2em;
     font-weight: 700;
     z-index: 5;
+    color: black;
 }
 
 .background-image {
@@ -91,22 +92,42 @@
     padding-top: 6rem;
 }
 
-.project-showcase:not-first-child {
+#project {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.project-showcase {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
 }
 
 .each-project {
-    width: 10rem;
-    height: 10rem;
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    margin: 50rem 10rem;
     margin: 4rem;
     background-color: black;
+    transition: 1s;
+    transition-property: font-size;
 }
 
+.each-project:hover {
+    font-size: 40px;
+}
 
+.each-project a {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    padding: 70px;
+}
 
 
 

@@ -13,7 +13,7 @@ function App() {
       "image": "",
       "description": "",
       "technologies": "",
-      "link": "",
+      "link": "https://gavi-caffee.surge.sh",
     },
     { 
       "id": 2,
@@ -51,14 +51,16 @@ function App() {
         
         <div className='background-image'>
 
+        <h2 id='project'>My Projects</h2>
+
           <div className='project-showcase'>
-            <h2 id='project'>My Projects</h2>
+            
             
             {
               projects.map(p => 
                 <div key={p.id}>
-                  <div type='button' className='each-project' onClick={() => console.log(p.title)}>
-                    {p.title}
+                  <div className='each-project' onClick={() => console.log(p.title)}>
+                    <a href={p.link}>{p.title}</a>
                   </div>
                 </div>
                 
