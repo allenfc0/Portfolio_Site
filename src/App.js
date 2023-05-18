@@ -1,10 +1,13 @@
 
 import './App.css';
 
+import { useState } from 'react';
+
 function App() {
 
-  let projects = [
+  const [projects, setProjects] = useState([
     { 
+      "id": 1,
       "title": "Coffee Shop",
       "type": "Landing Page for a Shop",
       "image": "",
@@ -13,6 +16,7 @@ function App() {
       "link": "",
     },
     { 
+      "id": 2,
       "title": "Chat Group",
       "type": "Communication",
       "image": "",
@@ -20,7 +24,8 @@ function App() {
       "technologies": "",
       "link": "",
     },
-  ];
+  ]);
+  
 
   return (
     <div className='app'>
@@ -28,7 +33,7 @@ function App() {
         
         <div className='header'>
 
-          <div><h3 id='title' >Allen Farias - Full Stack Developer</h3></div>
+          <h3 id='title' >Allen Farias - Full Stack Developer</h3>
           <nav className='nav-links'>
 
             <a href="#project">Projects</a>
@@ -46,17 +51,20 @@ function App() {
         
         <div className='background-image'>
 
-        
-
-          <div className='content'>
-
+          <div className='project-showcase'>
+            <h2 id='project'>My Projects</h2>
+            
             {
-
-              <div className='project-showcase' id='project'>
-                hello
-              </div>
-
+              projects.map(p => 
+                <div key={p.id}>
+                  <div type='button' className='each-project' onClick={() => console.log(p.title)}>
+                    {p.title}
+                  </div>
+                </div>
+                
+              )
             }
+            
 
           </div>
 
