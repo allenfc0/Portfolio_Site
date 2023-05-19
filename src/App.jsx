@@ -12,9 +12,9 @@ function App() {
       id: 1,
       title: "Coffee Shop",
       type: "RestAPI",
-      image: "",
-      description: "",
-      technologies: "",
+      image: "../image/caffeeapp.png",
+      description: "A website with a landing page for a coffee shop. This website can sign up/sign in users by using and storing data from a MySQL database. It is to take in orders and checkout items when a user is signed into their profile. An admin/owner can post new items and jobs into the database. It uses Restful web-services to handle data transactions. The frontend is automated to go into production as soon as the Gitlab repository is updated. The `gitlab-ci.yml` file takes care of the build and deployment using `Surge.sh`. The backend is pushed into a repository in GitHub for Heroku to find, build, and deploy the API.",
+      technologies: "HTML, CSS, Java, Spring Framework, Javascript, React.js",
       link: "https://gavi-caffee.surge.sh"
     },
     { 
@@ -72,9 +72,9 @@ function App() {
                       <span>{p.title}</span>
                       <span>{p.type}</span>
                       <span>{p.description}</span>
-                      <span>{p.technologies}</span>
-                      <span><img src={p.image} alt={p.title} /></span>
-                      <span><a href={p.link}>Live Website </a></span>
+                      <span>Technologies: {p.technologies}</span>
+                      <span><img src="../img/caffeeapp.png"  /></span>
+                      <span><a href={p.link} target='_blank'>Live Website </a></span>
                       <span><button className='def-button' onClick={() => canvas(p.id, false)}>Close</button></span>
                     </div>
                   </div>

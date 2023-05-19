@@ -131,15 +131,30 @@
 }
 
 .flex-canvas {
-
-}
-
-.full-project {
     background-color: white;
     color: black;
     text-decoration: none;
     font-size: 30px;
+    letter-spacing: 1px;
 
+    border-radius: 10px;
+    /*
+      To-do:
+        -Positioning the canvas with project information
+        and covering the other projects.
+        -Disable scrolling 
+    */
+    position: fixed;
+    top: 13%;
+    left: 0;
+    z-index: 8;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 85%;
+}
+
+.full-project {
     /*
         use flex to test
         use none for prod
@@ -147,24 +162,24 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: space-around;
+    justify-content: space-around;
+    padding: 3% 3%;
     
-    letter-spacing: 1px;
+}
 
-    /*
-      To-do:
-        -Positioning the canvas with project information
-        and covering the other projects.
-        -Disable scrolling 
-    */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 8;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-    height: 70%;
+.full-project span {
+    
+}
+
+.full-project span:nth-child(1) {
+    font-size: 35px;
+    border-bottom: solid 2px;
+    margin-top: 3.5%;
+}
+
+.full-project span:nth-child(2) {
+    font-size: 25px;
+    opacity: .7;
 }
 
 
@@ -175,14 +190,17 @@
     color: black;
     text-decoration: none;
     border-radius: 5px;
-    width: 60px;
+    width: 10%;
     height: 30px;
     cursor: pointer;
-    
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .def-button:hover {
     background-color: rgb(135, 76, 18);
+    width: 20%;
 }
 
 
