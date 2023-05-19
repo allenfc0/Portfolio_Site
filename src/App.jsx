@@ -3,7 +3,7 @@ import './App.css';
 
 import { useState } from 'react';
 
-import { ProjectManipulation as expand } from './ProjectManipulation';
+import { ProjectManipulation as canvas } from './ProjectManipulation';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     { 
       id: 1,
       title: "Coffee Shop",
-      type: "Landing Page for a Shop",
+      type: "RestAPI",
       image: "",
       description: "",
       technologies: "",
@@ -61,8 +61,22 @@ function App() {
             {
               projects.map(p => 
                 <div key={p.id} className={'id-' + p.id}>
-                  <div className='each-project' onClick={() => expand(p.id)}>
+                  <div className='each-project' onClick={() => canvas(p.id, true)}>
                     <span>{p.title}</span>
+                    <span>{p.type}</span>
+                    
+                  </div>
+                  
+                  <div className='flex-canvas'>
+                    <div className='full-project'>
+                      <span>{p.title}</span>
+                      <span>{p.type}</span>
+                      <span>{p.description}</span>
+                      <span>{p.technologies}</span>
+                      <span><img src={p.image} alt={p.title} /></span>
+                      <span><a href={p.link}>Live Website </a></span>
+                      <span><button className='def-button' onClick={() => canvas(p.id, false)}>Close</button></span>
+                    </div>
                   </div>
                   
                   
