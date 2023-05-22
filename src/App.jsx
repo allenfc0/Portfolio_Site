@@ -90,6 +90,10 @@ function App() {
           </div>
 
         </div>
+        
+        <div className='about-me-background'>
+
+        </div>
 
       </div>
       
