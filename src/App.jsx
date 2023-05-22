@@ -3,7 +3,8 @@ import './App.css';
 
 import { useState } from 'react';
 
-import { ProjectManipulation as canvas } from './ProjectManipulation';
+//import { ProjectManipulation } from './ProjectManipulation';
+import { openModal, closeModal } from './modalHandler'
 
 function App() {
 
@@ -61,24 +62,28 @@ function App() {
             {
               projects.map(p => 
                 <div key={p.id} className={'id-' + p.id}>
-                  <div className='each-project' onClick={() => canvas(p.id, true)}>
+
+                  <div className='each-project' onClick={() => openModal()}>
                     <span>{p.title}</span>
                     <span>{p.type}</span>
-                    
                   </div>
                   
-                  <div className='flex-canvas'>
-                    <div className='full-project'>
-                      <span>{p.title}</span>
+                  <div className='modal' id='modal'>
+                    <div className='modal-header'>
+                      <div>{p.title}</div>
+                      <button className='close-button data-close-button' onClick={() => closeModal()}>&times;</button>
+                    </div>
+
+                    <div className='modal-body'>
                       <span>{p.type}</span>
                       <span>{p.description}</span>
                       <span>Technologies: {p.technologies}</span>
                       <span><img src="../img/caffeeapp.png"  /></span>
                       <span><a href={p.link} target='_blank'>Live Website </a></span>
-                      <span><button className='def-button' onClick={() => canvas(p.id, false)}>Close</button></span>
+                      
                     </div>
+
                   </div>
-                  
                   
                 </div>
                 
@@ -98,7 +103,7 @@ function App() {
       </div>
       
 
-      
+      <div id='overlay' className=''></div>
     </div>
 
     
