@@ -31,7 +31,7 @@ function App() {
   
 
   return (
-    <div className='app'>
+    <div className='app overlay'>
       <div className='top-background'>
         
         <div className='header'>
@@ -78,7 +78,7 @@ function App() {
                       <span>{p.type}</span>
                       <span>{p.description}</span>
                       <span>Technologies: {p.technologies}</span>
-                      <span><img src="../img/caffeeapp.png"  /></span>
+                      <span><img src={"./img/caffeeapp.png"}  /></span>
                       <span><a href={p.link} target='_blank'>Live Website </a></span>
                       
                     </div>
@@ -102,8 +102,6 @@ function App() {
 
       </div>
       
-
-      <div id='overlay' className=''></div>
     </div>
 
     

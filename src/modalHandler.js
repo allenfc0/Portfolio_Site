@@ -5,22 +5,17 @@
 
 const overlay = document.getElementById('#overlay');
 
+
 function openModal(id) {
     const modal = document.querySelector('.id-' + id);
     console.log(modal);
 
-    if(modal == null || modal == undefined) return;
+    if(modal === null) return;
     modal.classList.add('active');
     //overlay.classList.add('active');
 }
+ 
 
-
-/* overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modals.active');
-    modals.forEach(modal => {
-        closeModal(modal);
-    })
-}) */
 function closeModal(id) {
     const modal = document.querySelector('.id-' + id);
     console.log(modal);

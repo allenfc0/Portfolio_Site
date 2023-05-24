@@ -12,7 +12,7 @@
 }
 
 .top-background {
-    background-image: url(../img/stardew.png);
+    background-image: url(./img/stardew.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -112,7 +112,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
+    
     background-color: black;
     transition: all .5s ease-in-out;
     cursor: pointer;
@@ -127,43 +127,6 @@
     font-size: 2rem;
     color: white;
     margin: 1rem;
-    
-}
-
-.flex-canvas {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-    letter-spacing: 1px;
-
-    border-radius: 10px;
-    /*
-      To-do:
-        -Positioning the canvas with project information
-        and covering the other projects.
-        -Disable scrolling 
-    */
-    position: fixed;
-    top: 13%;
-    left: 0;
-    z-index: 8;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-    height: 85%;
-}
-
-.full-project {
-    /*
-        use flex to test
-        use none for prod
-    */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 3% 3%;
     
 }
 
@@ -182,9 +145,10 @@
     height: 40rem;
     color: black;
 }
-
+ 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 .modal-header {
@@ -198,6 +162,7 @@
 .modal-header .title {
     font-size: 2.5rem;
     font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .modal-header .close-button {
@@ -222,24 +187,30 @@
 .modal-body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    height: 35rem;
     padding: 10px 15px;
     font-size: large;
 }
 
-#overlay {
+.modal-body span:nth-child(1) {
+    opacity: 0.5;
+}
+
+.modal-body span:nth-child(2) {
+    line-height: large + 10px;
+}
+
+..overlay {
     position: fixed;
-    opacity: 0;
+    opacity: .5;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
-}
-
-#overlay.active {
-    pointer-events: all;
-    opacity: 1;
 }
 
 /* Helper */
