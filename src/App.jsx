@@ -61,17 +61,17 @@ function App() {
             
             {
               projects.map(p => 
-                <div key={p.id} className={'id-' + p.id}>
+                <div key={p.id} className={'section-id-' + p.id}>
 
-                  <div className='each-project' onClick={() => openModal()}>
+                  <div className='each-project' onClick={() => openModal(p.id)}>
                     <span>{p.title}</span>
                     <span>{p.type}</span>
                   </div>
                   
-                  <div className='modal' id='modal'>
+                  <div className={'modal id-' + p.id + ' active'} >
                     <div className='modal-header'>
-                      <div>{p.title}</div>
-                      <button className='close-button data-close-button' onClick={() => closeModal()}>&times;</button>
+                      <div className='title'>{p.title}</div>
+                      <button className='close-button' onClick={() => closeModal(p.id)}>&times;</button>
                     </div>
 
                     <div className='modal-body'>

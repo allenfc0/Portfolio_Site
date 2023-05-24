@@ -177,8 +177,10 @@
     border-radius: 15px;
     z-index: 15;
     background-color: white;
-    width: 600px;
+    width: 70rem;
     max-width: 80%;
+    height: 40rem;
+    color: black;
 }
 
 .modal.active {
@@ -194,7 +196,7 @@
 }
 
 .modal-header .title {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -204,10 +206,24 @@
     outline: none;
     font-size: 1.25rem;
     font-weight: bold;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: ease-in-out;
+    transition-duration: .4s;
+    padding: 15px;
+    
+}
+
+.modal-header .close-button:hover {
+    background-color: black;
+    color: white;
 }
 
 .modal-body {
+    display: flex;
+    flex-direction: column;
     padding: 10px 15px;
+    font-size: large;
 }
 
 #overlay {
