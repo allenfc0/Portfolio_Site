@@ -31,7 +31,7 @@ function App() {
   
 
   return (
-    <div className='app overlay'>
+    <div className='app'>
       <div className='top-background'>
         
         <div className='header'>
@@ -68,7 +68,9 @@ function App() {
                     <span>{p.type}</span>
                   </div>
                   
-                  <div className={'modal id-' + p.id + ' active'} >
+                  <div className='overlay'></div>
+
+                  <div className={'modal id-' + p.id} >
                     <div className='modal-header'>
                       <div className='title'>{p.title}</div>
                       <button className='close-button' onClick={() => closeModal(p.id)}>&times;</button>
@@ -79,7 +81,7 @@ function App() {
                       <span>{p.description}</span>
                       <span>Technologies: {p.technologies}</span>
                       <span><img src={"./img/caffeeapp.png"}  /></span>
-                      <span><a href={p.link} target='_blank'>Live Website </a></span>
+                      <span><a href={p.link} target='_blank' rel='noreferrer'>Live Website </a></span>
                       
                     </div>
 

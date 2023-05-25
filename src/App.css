@@ -202,7 +202,7 @@
     line-height: large + 10px;
 }
 
-..overlay {
+.overlay.active {
     position: fixed;
     opacity: .5;
     top: 0;
@@ -210,8 +210,11 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
+    filter: blur(20px);
+    height: max-content;
+    overflow-y: hidden;
 }
+
 
 /* Helper */
 .def-button {
