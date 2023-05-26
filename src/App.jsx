@@ -91,19 +91,28 @@ function App() {
                 
               )
             }
-            
 
-            
           </div>
 
         </div>
         
         <div className='about-me-background'>
-
+            <h2 id='about'>About Me</h2>
+            <div>
+              
+            </div>
         </div>
 
       </div>
       
+      <div className='contact-me-background'>
+        <h2 id='contact'>Contact Me</h2>
+        <div>
+
+        </div>
+
+      </div>
+
     </div>
 
     
