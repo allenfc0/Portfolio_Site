@@ -107,9 +107,28 @@ function App() {
       
       <div className='contact-me-background'>
         <h2 id='contact'>Contact Me</h2>
-        <div>
+        <form action="" method="GET">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"/>
+          </div>
 
-        </div>
+          <div>
+            <label for="subject" >Subject</label>
+            <input type="text" name="subject" id="subject" required/>
+          </div>
+            
+          <div>
+            <label for="message">Message</label>
+            <input type="text" name='message' id='message' required/>
+          </div>
+
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+          
+
+        </form>
 
       </div>
 
