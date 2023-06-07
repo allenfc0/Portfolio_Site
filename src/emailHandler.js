@@ -3,11 +3,11 @@ import { API_URL } from "./API_URL";
 
 const URL = `${API_URL}/api/send-email`;
 
-let 
-
 export async function emailHandler() {
-
-    console.log("got hewe");
+    let fromName = document.getElementById('from-name').value;
+    let email = document.getElementById('email').value;
+    let subject = document.getElementById('subject').value;
+    let message = document.getElementById('message').value;
 
     const res = await fetch(URL, {
         method: 'POST',
@@ -16,11 +16,11 @@ export async function emailHandler() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "fromName": "Allen",
-            "from": "allenfarias29@gmail.com",
-            "to": "store@store.com",
-            "subject": "test title",
-            "body": "this is a test body"
+            "fromName": fromName,
+            "from": email,
+            "to": "",
+            "subject": subject,
+            "body": message
         })
     });
 }

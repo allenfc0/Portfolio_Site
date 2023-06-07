@@ -115,27 +115,27 @@ function App() {
 
           <div className='form-input'>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name"  />
+            <input type="text" name="name" id="from-name" required/>
           </div>
 
           <div className='form-input'>
             <label htmlFor="email">Email</label>
-            <input type="email" name='email' id='name'  />
+            <input type="email" name='email' id='email' required />
           </div>
 
           <div className='form-input'>
             <label htmlFor="subject" >Subject</label>
-            <input type="text" name="subject" id="subject"  />
+            <input type="text" name="subject" id="subject" required />
           </div>
             
           <div className='form-input'>
             <label htmlFor="message">Message</label>
             <textarea type="text" name='message' id='message'
-                      rows='10' cols='50'  />
+                      rows='10' cols='50' required />
           </div>
 
           <div>
-            <button type="submit" className='def-button' onClick={ () => emailHandler() }>Submit</button>
+            <button type="submit" className='def-button' onSubmit={ () => emailHandler() }>Submit</button>
           </div>
           
         </div>
