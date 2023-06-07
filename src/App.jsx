@@ -135,7 +135,7 @@ function App() {
           </div>
 
           <div>
-            <button type="submit" className='def-button' onSubmit={ () => emailHandler() }>Submit</button>
+            <button type="submit" className='def-button' onClick={ () => emailHandler() }>Submit</button>
           </div>
           
         </div>
