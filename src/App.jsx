@@ -3,8 +3,8 @@ import './App.css';
 
 import { useState } from 'react';
 
-//import { ProjectManipulation } from './ProjectManipulation';
-import { openModal, closeModal } from './modalHandler'
+import { openModal, closeModal } from './modalHandler';
+import { emailHandler } from './emailHandler'
 
 function App() {
 
@@ -48,8 +48,7 @@ function App() {
         </div>
         
         <div id='introduction'>
-          Hello, my name is Allen & <br/> 
-          I am a Full Stack Developer
+          Full Stack Developer
         </div>
         
         <div className='background-image'>
@@ -98,8 +97,13 @@ function App() {
         
         <div className='about-me-background'>
             <h2 id='about'>About Me</h2>
-            <div>
-              
+            <div id='about-body'>
+              Hello 👋, <br />
+              My name is Allen. I love learning about technology.
+              There are always technologies <br /> that modernize the way 
+              that we do tasks and implement high end solutions. When <br /> 
+              adding me to your team, you can be sure 
+              that I will be a great asset.
             </div>
         </div>
 
@@ -107,28 +111,34 @@ function App() {
       
       <div className='contact-me-background'>
         <h2 id='contact'>Contact Me</h2>
-        <form action="" method="GET">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name"/>
+        <div className='form'>
+
+          <div className='form-input'>
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name"  />
           </div>
 
-          <div>
-            <label for="subject" >Subject</label>
-            <input type="text" name="subject" id="subject" required/>
+          <div className='form-input'>
+            <label htmlFor="email">Email</label>
+            <input type="email" name='email' id='name'  />
+          </div>
+
+          <div className='form-input'>
+            <label htmlFor="subject" >Subject</label>
+            <input type="text" name="subject" id="subject"  />
           </div>
             
-          <div>
-            <label for="message">Message</label>
-            <input type="text" name='message' id='message' required/>
+          <div className='form-input'>
+            <label htmlFor="message">Message</label>
+            <textarea type="text" name='message' id='message'
+                      rows='10' cols='50'  />
           </div>
 
           <div>
-            <button type="submit">Submit</button>
+            <button type="submit" className='def-button' onClick={ () => emailHandler() }>Submit</button>
           </div>
           
-
-        </form>
+        </div>
 
       </div>
 

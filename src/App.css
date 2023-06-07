@@ -27,6 +27,7 @@
     
     min-height: 100vh;
     width: 100%;
+    padding: 0 5%;
     
     color: #fff;
 
@@ -75,8 +76,8 @@
 
 #introduction {
     position: relative;
-    padding: 20% 25%;
-    font-size: 2em;
+    padding: 20% 5%;
+    font-size: 3.5em;
     font-weight: 700;
     z-index: 5;
     color: black;
@@ -90,12 +91,11 @@
     z-index: 5;
     width: 100%;
     height: 90vh;
-    padding-top: 6rem;
 }
 
 #project {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
+    font-size: 3rem;
+    padding: 5rem 2rem;
 }
 
 .project-showcase {
@@ -233,12 +233,21 @@
     width: 100%;
     height: 90vh;
     padding-top: 6rem;
+    color: black;
 }
 
 #about {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
+    font-size: 3rem;
+    padding: 5rem 2rem;
     color: black;
+}
+
+#about-body {
+    color: black;
+    background-color: white;
+    font-size: 2.2rem;
+    margin: 0 1rem;
+    padding: 1.5rem;
 }
 
 .contact-me-background {
@@ -246,15 +255,31 @@
     z-index: 5;
     width: 100%;
     height: 90vh;
-    padding-top: 6rem;
+    background-color:#000;
 }
 
 #contact {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
+    font-size: 3rem;
+    padding: 5rem 2rem;
+    color: #fff;
+}
+
+.form {
+    background-color: rgb(171, 166, 166);
+    padding: 30px;
+    margin: 0 5%;
+    border-radius: 5px;
 }
 
 /* Helper */
+
+.form-input {
+    padding: 1rem;
+    margin: 2rem;
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+
 .def-button {
     background-color: rgb(186, 128, 62);
     color: black;
