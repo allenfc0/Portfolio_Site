@@ -1,5 +1,6 @@
 
 import './App.css';
+import './Mobile.css'
 
 import { useState } from 'react';
 
@@ -114,24 +115,24 @@ function App() {
         <div className='form'>
 
           <div className='form-input'>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="from-name" required/>
+            <label htmlFor="name">Name:</label>
+            <input type="text" name="name" id="from-name" className='all-input' required/>
           </div>
 
           <div className='form-input'>
-            <label htmlFor="email">Email</label>
-            <input type="email" name='email' id='email' required />
+            <label htmlFor="email">Email:</label>
+            <input type="email" name='email' id='email' className='all-input' required />
           </div>
 
           <div className='form-input'>
-            <label htmlFor="subject" >Subject</label>
-            <input type="text" name="subject" id="subject" required />
+            <label htmlFor="subject" >Subject:</label>
+            <input type="text" name="subject" id="subject" className='all-input' required />
           </div>
             
           <div className='form-input'>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message:</label>
             <textarea type="text" name='message' id='message'
-                      rows='10' cols='50' required />
+                      rows='10' cols='50' className='all-input' required />
           </div>
 
           <div>
