@@ -37,7 +37,7 @@ function App() {
         
         <div className='header'>
 
-          <h3 id='title' >Allen Farias - Full Stack Developer</h3>
+          <h3 id='title'>Portfolio - Allen Farias</h3>
           <nav className='nav-links'>
 
             <a href="#project">Projects</a>
@@ -45,6 +45,23 @@ function App() {
             <a href="#contact">Contact Me</a>
 
           </nav>
+
+        </div>
+
+        <div className='content-flex'>
+
+          <div className='mobile-nav'>
+            <h3>Portfolio</h3>
+            <div className='burger-nav open'>
+              <div className='burger-line'></div>
+            </div>
+          </div>
+
+          <div className='burger-pages'>
+            <a href='#project' className='burger-link'>Projects</a>
+            <a href='#about' className='burger-link'>About Me</a>
+            <a href='#contact' className='burger-link'>Contact Me</a>
+          </div>
 
         </div>
         
