@@ -3,7 +3,7 @@
     display: none;
     flex-wrap: nowrap;
     flex-direction: column;
-
+    padding-top: 3rem;
 }
 
 .mobile-nav {
@@ -68,8 +68,9 @@
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
+/*display flex*/
 .burger-pages {
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-wrap: nowrap;
     position: absolute;
@@ -91,9 +92,12 @@
         display: none;
     }
 
-    /*
-    Hamburger styling
-    */
+    
+
+    .each-project span {
+        font-size: 3vh;
+        
+    }
 
     
 }

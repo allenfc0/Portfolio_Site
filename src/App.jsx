@@ -52,7 +52,7 @@ function App() {
 
           <div className='mobile-nav'>
             <h3>Portfolio</h3>
-            <div className='burger-nav open'>
+            <div className='burger-nav'>
               <div className='burger-line'></div>
             </div>
           </div>
