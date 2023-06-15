@@ -118,8 +118,8 @@ function App() {
             <div id='about-body'>
               Hello 👋, <br />
               My name is Allen. I love learning about technology.
-              There are always technologies <br /> that modernize the way 
-              that we do tasks and implement high end solutions. When <br /> 
+              There are always technologies that modernize the way 
+              that we do tasks and implement high end solutions. When 
               adding me to your team, you can be sure 
               that I will be a great asset.
             </div>
