@@ -148,8 +148,8 @@ function App() {
             
           <div className='form-input'>
             <label htmlFor="message">Message:</label>
-            <textarea type="text" name='message' id='message'
-                      rows='10' cols='50' className='all-input' required />
+            <textarea name='message' id='message'
+                       className='all-input' required />
           </div>
 
           <div>
