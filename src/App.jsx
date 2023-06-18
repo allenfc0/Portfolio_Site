@@ -5,7 +5,10 @@ import './Mobile.css'
 import { useState } from 'react';
 
 import { openModal, closeModal } from './modalHandler';
-import { emailHandler } from './emailHandler'
+
+import { emailHandler } from './emailHandler';
+import { burgerHandler } from './burgerHandler';
+import { click } from '@testing-library/user-event/dist/click';
 
 function App() {
 
@@ -52,15 +55,20 @@ function App() {
 
           <div className='mobile-nav'>
             <h3>Portfolio</h3>
-            <div className='burger-nav'>
+            <div className='burger-nav' onClick={() => burgerHandler()}>
               <div className='burger-line'></div>
             </div>
           </div>
 
-          <div className='burger-pages'>
-            <a href='#project' className='burger-link'>Projects</a>
-            <a href='#about' className='burger-link'>About Me</a>
-            <a href='#contact' className='burger-link'>Contact Me</a>
+          <div className='burger-pages' id='burger-pages'>
+            <a href='#project' className='burger-link' 
+                onClick={burgerHandler} >Projects</a>
+
+            <a href='#about' className='burger-link' 
+                onClick={burgerHandler} >About Me</a>
+
+            <a href='#contact' className='burger-link' 
+                onClick={burgerHandler} >Contact Me</a>
           </div>
 
         </div>

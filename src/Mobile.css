@@ -70,10 +70,10 @@
 
 /*display: flex none*/
 .burger-pages {
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-wrap: nowrap;
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
@@ -83,8 +83,15 @@
     background-color: #000;
     z-index: 6;
 
+    transition: ease-in-out;
+    transition-duration: 2s;
+
     /*testing for overflow*/
     overflow: scroll;
+}
+
+.burger-pages.active {
+    
 }
 
 .burger-pages a {
@@ -112,5 +119,8 @@
         
     }
 
+    .all-input {
+        width: 40vw;
+    }
     
 }
