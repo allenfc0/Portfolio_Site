@@ -35,7 +35,7 @@ function App() {
   
 
   return (
-    <div className='app'>
+    <div className='app' id='scroll'>
       <div className='top-background'>
         
         <div className='header'>
@@ -83,6 +83,7 @@ function App() {
 
           <div className='project-showcase'>
             
+          <div className='overlay'></div>
             
             {
               projects.map(p => 
@@ -93,7 +94,7 @@ function App() {
                     <span>{p.type}</span>
                   </div>
                   
-                  <div className='overlay'></div>
+                  
 
                   <div className={'modal id-' + p.id} >
                     <div className='modal-header'>

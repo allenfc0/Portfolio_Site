@@ -11,11 +11,6 @@
 
 .app {
     font-size: 1em;
-    overflow: visible;
-}
-
-.app.disable-scroll {
-    overflow-y: hidden;
 }
 
 .top-background {
@@ -28,8 +23,6 @@
     /*shows color blue if I am off bounds*/
     background-color: rgb(0, 119, 255);
 
-    
-    
     width: 100%;
     height: fit-content;
     color: #fff;
@@ -82,7 +75,6 @@
     padding: 20% 5%;
     font-size: 3.5em;
     font-weight: 700;
-    z-index: 5;
     color: black;
 }
 
@@ -91,7 +83,6 @@
         rgb(197, 121, 34), rgb(107, 68, 23)
     );
     position: relative;
-    z-index: 5;
     width: 90%;
     height: 100%;
     margin: 10rem 5% 0 5%;
@@ -174,6 +165,8 @@
 }
 
 .modal-header .close-button {
+    content: '';
+    color: #000;
     cursor: pointer;
     border: none;
     outline: none;
@@ -211,12 +204,21 @@
     line-height: large + 10px;
 }
 
+.overlay {
+    position: relative;
+    height: 0;
+    width: 0;
+    margin: 0;
+    overflow-y: visible;
+}
+
 .overlay.active {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    margin: 0;
     background-color: rgba(0, 0, 0, 0.5);
     filter: blur(20px);
     overflow-y: hidden;

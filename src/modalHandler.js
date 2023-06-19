@@ -3,26 +3,23 @@
 function openModal(id) {
     const modal = document.querySelector('.id-' + id);
     const overlay = document.querySelector('.overlay');
-    const app = document.querySelector('.app');
-    console.log(overlay);
 
     if(modal === null) return;
     modal.classList.add('active');
+    document.body.style.overflowY = "hidden";
     overlay.classList.add('active');
-    app.classList.add('disable-scroll');
 }
  
 
 function closeModal(id) {
     const modal = document.querySelector('.id-' + id);
     const overlay = document.querySelector('.overlay');
-    const app = document.querySelector('.app');
-    console.log("hello");
+    
 
     if(modal == null) return;
     modal.classList.remove('active');
+    document.body.style.overflowY = "auto";
     overlay.classList.remove('active');
-    app.classList.remove('disable-scroll');
     
 }
 
