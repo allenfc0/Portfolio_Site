@@ -2,13 +2,16 @@
 import './App.css';
 import './Mobile.css'
 
+//Hooks
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+// Handlers
 import { openModal, closeModal } from './modalHandler';
-
-import { emailHandler } from './emailHandler';
 import { burgerHandler } from './burgerHandler';
-import { click } from '@testing-library/user-event/dist/click';
+
+//Components
+import { ContactMe } from './ContactMe';
 
 function App() {
 
@@ -136,38 +139,7 @@ function App() {
 
       </div>
       
-      <div className='contact-me-background'>
-        <h2 id='contact'>Contact Me</h2>
-        <div className='form'>
-
-          <div className='form-input'>
-            <label htmlFor="name">Name:</label>
-            <input type="text" name="name" id="from-name" className='all-input' required/>
-          </div>
-
-          <div className='form-input'>
-            <label htmlFor="email">Email:</label>
-            <input type="email" name='email' id='email' className='all-input' required />
-          </div>
-
-          <div className='form-input'>
-            <label htmlFor="subject" >Subject:</label>
-            <input type="text" name="subject" id="subject" className='all-input' required />
-          </div>
-            
-          <div className='form-input'>
-            <label htmlFor="message">Message:</label>
-            <textarea name='message' id='message'
-                       className='all-input' required />
-          </div>
-
-          <div>
-            <button type="submit" className='def-button' onClick={ () => emailHandler() }>Submit</button>
-          </div>
-          
-        </div>
-
-      </div>
+      <ContactMe/>
 
     </div>
 

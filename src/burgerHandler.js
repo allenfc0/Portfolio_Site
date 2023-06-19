@@ -9,11 +9,9 @@ export function burgerHandler() {
     if(!burgerOpen) {
         burger.style.display = 'flex';
         burgerOpen = true;
-        console.log('flex')
     } else if(burgerOpen) {
         burger.style.display = 'none';
         burgerOpen = false;
-        console.log('no flex')
     }
 
 }
